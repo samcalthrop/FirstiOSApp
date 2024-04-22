@@ -10,12 +10,38 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            NavigationStack {
+                List {
+                    NavigationLink("Item 1") {
+                        ConditionalCircle()
+                    } .navigationTitle("List")
+                }
+            }
         }
-        .padding()
+    }
+}
+
+struct ConditionalCircle: View {
+    @State var isOn = false
+    
+    var body: some View {
+        VStack {
+            Circle()
+                .frame(maxHeight: 200)
+                .blur(radius: isOn ? 20 : 50)
+                .shadow(color: isOn ? .pink : .mint, radius: isOn ? 3 : 3)
+                .scaleEffect(isOn ? 1.8 : 1.0)
+                .animation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 2), value: isOn)
+            
+            Text("Press It!")
+                .bold()
+                .font(.title)
+            
+            Button("Press Me!") {
+                isOn.toggle()
+            }
+                .italic()
+        }
     }
 }
 

@@ -14,6 +14,7 @@
 		2559C8C12BD26AFD009669D5 /* FirstiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559C8C02BD26AFD009669D5 /* FirstiOSAppTests.swift */; };
 		2559C8CB2BD26AFD009669D5 /* FirstiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559C8CA2BD26AFD009669D5 /* FirstiOSAppUITests.swift */; };
 		2559C8CD2BD26AFD009669D5 /* FirstiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559C8CC2BD26AFD009669D5 /* FirstiOSAppUITestsLaunchTests.swift */; };
+		2559C8DB2BD29320009669D5 /* SwiftAudioEx in Frameworks */ = {isa = PBXBuildFile; productRef = 2559C8DA2BD29320009669D5 /* SwiftAudioEx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2559C8DB2BD29320009669D5 /* SwiftAudioEx in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = FirstiOSApp;
+			packageProductDependencies = (
+				2559C8DA2BD29320009669D5 /* SwiftAudioEx */,
+			);
 			productName = FirstiOSApp;
 			productReference = 2559C8AC2BD26AFC009669D5 /* FirstiOSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 2559C8A32BD26AFC009669D5;
+			packageReferences = (
+				2559C8D92BD29320009669D5 /* XCRemoteSwiftPackageReference "SwiftAudioEx" */,
+			);
 			productRefGroup = 2559C8AD2BD26AFC009669D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -577,6 +585,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2559C8D92BD29320009669D5 /* XCRemoteSwiftPackageReference "SwiftAudioEx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doublesymmetry/SwiftAudioEx.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2559C8DA2BD29320009669D5 /* SwiftAudioEx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2559C8D92BD29320009669D5 /* XCRemoteSwiftPackageReference "SwiftAudioEx" */;
+			productName = SwiftAudioEx;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2559C8A42BD26AFC009669D5 /* Project object */;
 }
